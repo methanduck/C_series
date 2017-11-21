@@ -1,0 +1,11 @@
+j
+i L 1
+h L 2
+g L 4
+f L 8
+e L 16
+d L 32
+c L 64
+b L 128
+a L 256
+

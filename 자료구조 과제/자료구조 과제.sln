@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "자료구조 과제1", "자료구조 과제1\자료구조 과제1.vcxproj", "{8064B432-48D8-40AE-A241-136529F59DF9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "자료구조 2", "자료구조 2\자료구조 2.vcxproj", "{97822C32-18FF-4561-A6BB-1EBB18EF0BE5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8064B432-48D8-40AE-A241-136529F59DF9}.Debug|x64.ActiveCfg = Debug|x64
+		{8064B432-48D8-40AE-A241-136529F59DF9}.Debug|x86.ActiveCfg = Debug|Win32
+		{8064B432-48D8-40AE-A241-136529F59DF9}.Debug|x86.Build.0 = Debug|Win32
+		{8064B432-48D8-40AE-A241-136529F59DF9}.Release|x64.ActiveCfg = Release|x64
+		{8064B432-48D8-40AE-A241-136529F59DF9}.Release|x64.Build.0 = Release|x64
+		{8064B432-48D8-40AE-A241-136529F59DF9}.Release|x86.ActiveCfg = Release|Win32
+		{8064B432-48D8-40AE-A241-136529F59DF9}.Release|x86.Build.0 = Release|Win32
+		{97822C32-18FF-4561-A6BB-1EBB18EF0BE5}.Debug|x64.ActiveCfg = Debug|x64
+		{97822C32-18FF-4561-A6BB-1EBB18EF0BE5}.Debug|x64.Build.0 = Debug|x64
+		{97822C32-18FF-4561-A6BB-1EBB18EF0BE5}.Debug|x86.ActiveCfg = Debug|Win32
+		{97822C32-18FF-4561-A6BB-1EBB18EF0BE5}.Debug|x86.Build.0 = Debug|Win32
+		{97822C32-18FF-4561-A6BB-1EBB18EF0BE5}.Release|x64.ActiveCfg = Release|x64
+		{97822C32-18FF-4561-A6BB-1EBB18EF0BE5}.Release|x64.Build.0 = Release|x64
+		{97822C32-18FF-4561-A6BB-1EBB18EF0BE5}.Release|x86.ActiveCfg = Release|Win32
+		{97822C32-18FF-4561-A6BB-1EBB18EF0BE5}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2B2FE10F-1133-4E97-BC93-5AA242455E59}
+	EndGlobalSection
+EndGlobal
