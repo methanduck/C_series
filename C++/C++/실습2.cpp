@@ -1,126 +1,123 @@
 #include <iostream>
-#include <string>
-#include <algorithm>
+
 using namespace std;
 
-class person
+class Shape
 {
+protected:
+	int x,y;
 public:
-	person(){};
-
-	void setName(string name)
+	Shape()
 	{
-		this->name = name;
-	}
-	string getName()
+	};
+	Shape(int x, int y)
 	{
-		return this->name;
-	}
-	void del(char c)
+		this->x = x;
+		this->y = y;
+	};
+	virtual double area() =0;
+	virtual double surface() = 0;
+	virtual void print()
 	{
-		for (int i = 0; i < this->name.length(); i++)
-		{
-			if (name[i] == c)
-				name[i] = ' ';
-		}
+		cout << "(" << this->x << "," << this->y << "),A=" << area() << ",S = "<<surface() <<endl;
 	}
-	void del()
-	{
-		for (int a = 0; a < this->name.length(); a++)
-		{
-			if (name[a] == ' ')
-				this->name.erase(a, 1);
-		}
-		
-	}
-
-	person operator % (person input);
-	person operator * (int input);
-	~person(){};
+	~Shape(){};
 
 private:
-	string name;
-	bool	check;
-};
-person person::operator* (int input)
-{
-	person temp;
-	temp.setName(this->name);
-	for (int i = 0; i < input; i++)
-	{
-		temp.name.push_back('|');
-		temp.name.append(this->name);
-	}
-	return temp;
-}
-
-person person::operator% (person input)
-{
-	person temp;
-	string inputstring;
-	const char*a;
-	const char*b;
-	int count = 0;
-	inputstring = input.getName();
-	if (inputstring.length() < name.length())
-	{
-		temp.setName(name);
-		for (int i = 0; i < (signed)inputstring.length(); i++)
-		{
-			b = new char[inputstring.at(i)];
-			for (int j = 0; j < (signed)name.length(); j++)
-			{
-				a = new char[name.at(j)];
-				
-				if (strncmp(a, b, 0) == 0)
-				{
-					temp.del(inputstring.at(i));
-				}
-			}
-		}
-		temp.del();
-	}
-	else
-	{
-		temp.setName(inputstring);
-		for (int i = 0; i < (signed)name.length(); i++)
-		{
-			b = new char[name.at(i)];
-			for (int j = 0; j < (signed)inputstring.length(); j++)
-			{
-				a = new char[inputstring.at(j)];
-				
-				if (strncmp(a, b, 0) == 0)
-				{
-					temp.del(name.at(i));
-				}
-			}
-		}
-		temp.del();
-
-	}
-
-	return temp;
 
 };
+class Rect: public Shape
 
+{
+private:
+	double width,height;
+public:
+	Rect(int width, int height,int x, int y):Shape(x,y)
+	{
+		this->width=width;
+		this->height=height;
+	}
+	virtual double area()
+	{
+		return this->height*this->width;
+	}
+	virtual double surface()
+	{
+		return (this->height+this->width)*2;
+	}
+	virtual void print()
+	{
+		cout << "Rect : width ="<<this->width<<", Height = "<<this->height<<endl;
+		Shape::print();
+	};
+	double getwidth()
+	{
+		return this->width;
+	}
+	double getheight()
+	{
+		return this->height;
+	}
+	int getx()
+	{
+		return this->x;
+			
+	}
+	int gety()
+	{
+		return this->y;
+	}
 
+	~Rect(){};
+
+private:
+
+};
+class Circle : public Shape
+{
+private:
+		double radius;
+public:
+	Circle(int radius,int x,int y ):Shape(x,y)
+	{
+		this->radius = radius;
+	};
+
+	virtual double area()
+	{
+		return 3.14*radius*radius;
+	};
+	virtual double surface()
+	{
+		return 2*3.14*radius;
+	};
+	virtual void print()
+	{
+		cout << "Circle : R ="<<this->radius<<endl;
+		Shape::print();
+	};
+	
+	
+	double getradius()
+	{
+		return this->radius;
+	}
+	int getx()
+	{
+		return this->x;
+			
+	}
+	int gety()
+	{
+		return this->y;
+	}
+~Circle(){};
+};
 
 int main()
-
 {
-	person p1, p2, p3;
-	p1.setName("Hyoungho");
-	p2.setName("Hyoho");
-	cout << p1.getName() << endl;
-	cout << p2.getName() << endl;
-
-	p3 = p1%p2;
-	
-	cout << p3.getName();
-	cout << endl;
-	p3=p1*3;
-	cout<<p3.getName();
-
-	return 0;
+	Rect *r =new Rect(10,10,20,20);
+	Circle *c = new Circle(20,20,10);
+	r->print();
+	c->print();
 }
