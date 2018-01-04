@@ -105,15 +105,17 @@ class BookPrice
 
 public:
 	BookPrice() {};
-	BookPrice(Book *book, Mall *mall)
+	BookPrice(Book *book, Mall *mall) 
 	{
-		this->data.setPrice(book->getPrice());
-		this->data.setISBN(book->getISBN());
-		this->data.setRelease(book->getRelease());
-		this->data.setBookname(book->getBookname());
-		this->data2.setMallname(mall->getMallname());
-		this->data2.setRolledNum(mall->getRollednum());
-	}
+		this->data = *book;
+		this->data2 = *mall;
+	};
+
+    void set(Book *book, Mall *mall)
+	{
+		this->data = *book;
+		this->data2 = *mall;
+	};
 
 	bool operator < (BookPrice input)
 	{
@@ -126,32 +128,27 @@ public:
 
 int main()
 {
-	Book *book;
-	Mall *mall;
+	Book *book = new Book();
+	Mall *mall = new Mall();
 	vector<BookPrice> Data;
-	BookPrice *temp;
+	BookPrice *temp = new BookPrice();
 	vector<string> input;
 	string inputTemp;
 	string split[6];
 	string::size_type sz;
-	//cout << "책의 수량을 입력하세요 >> ";
-	//cin >> in;
 
-
-	while (true)
-	{
 		while (true)
 		{
 			cout << "책의 정보를 입력하세요" << endl;
 			getline(cin, inputTemp, '\n');
-			if (inputTemp == "그만")
+			if (inputTemp.compare("그만") == 0)
 			{
 				break;
 			}
 			else
 				input.push_back(inputTemp);
 		}
-		for (int i = 0; i < input.size(); i++)
+		for (int i = 0; i <= input.size(); i++)
 		{
 			istringstream read(input.back());
 			input.pop_back();
@@ -159,22 +156,31 @@ int main()
 			{
 				getline(read, split[i], ' ');
 			}
-			book = new Book(split[0], stoi(split[1], &sz), stoi(split[2], &sz), stoi(split[3], &sz));
-			mall = new Mall(split[4], split[5]);
+			book->setBookname(split[0]);
+			book->setISBN(stoi(split[1], &sz));
+			split[2].pop_back();
+			int find = -1;
+				find =split[2].find(',');
+			if(find !=-1)
+			split[2].erase(find,find-1);
+			split[2].append("원");
+			book->setPrice(stoi(split[2], &sz));
+			book->setRelease(stoi(split[3], &sz));
+			mall->setMallname(split[4]);
+			mall->setRolledNum(split[5]);
+			temp->set(book,mall);
+			Data.push_back(*temp);
 		}
 
-
-		temp = new BookPrice(book, mall);
-		Data.push_back(*temp);
-
-	}
-
-	sort(Data.begin(), Data.end());
-
-	for (int i = 0; i < Data.size(); i++)
+	if (Data.size() > 0)
 	{
-		cout << Data.at(i).data.getPrice() << endl;
-		cout << Data.at(i).data.getRelease() << endl;
+		sort(Data.begin(), Data.end());
+		for (int i = 0; i < Data.size(); i++)
+		{
+			cout << Data.at(i).data.getBookname()<< "\t"<<Data.at(i).data.getISBN() << "\t" << Data.at(i).data.getPrice() << "\t" << Data.at(i).data.getRelease() << "\t" << Data.at(i).data2.getMallname() << endl;
+		}
 	}
 
+
+	
 }

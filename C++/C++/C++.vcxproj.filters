@@ -54,6 +54,21 @@
     <ClCompile Include="벡터_실습.cpp">
       <Filter>소스 파일\실습</Filter>
     </ClCompile>
+    <ClCompile Include="generics_STK.cpp">
+      <Filter>소스 파일\study</Filter>
+    </ClCompile>
+    <ClCompile Include="STL_연습.cpp">
+      <Filter>소스 파일\study</Filter>
+    </ClCompile>
+    <ClCompile Include="string연습.cpp">
+      <Filter>소스 파일\study</Filter>
+    </ClCompile>
+    <ClCompile Include="저녁먹기미션.cpp">
+      <Filter>소스 파일\study</Filter>
+    </ClCompile>
+    <ClCompile Include="연습.cpp">
+      <Filter>소스 파일\study</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="class.h">

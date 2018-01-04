@@ -63,5 +63,8 @@
     <ClCompile Include="hw8.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="string_search.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
