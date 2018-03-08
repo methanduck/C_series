@@ -17,11 +17,6 @@ int main()
 	
 }
 
-void test(int input)
-{
-	cout << input;
-}
-
 int calc(string input)
 {
 	input.pop_back();
