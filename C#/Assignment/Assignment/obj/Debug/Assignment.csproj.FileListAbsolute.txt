@@ -1,0 +1,10 @@
+H:\dhdms\Git\C_Lang\C#\Assignment\Assignment\bin\Debug\Assignment.exe.config
+H:\dhdms\Git\C_Lang\C#\Assignment\Assignment\bin\Debug\Assignment.exe
+H:\dhdms\Git\C_Lang\C#\Assignment\Assignment\bin\Debug\Assignment.pdb
+H:\dhdms\Git\C_Lang\C#\Assignment\Assignment\obj\Debug\Assignment.csprojResolveAssemblyReference.cache
+H:\dhdms\Git\C_Lang\C#\Assignment\Assignment\obj\Debug\Assignment.Form1.resources
+H:\dhdms\Git\C_Lang\C#\Assignment\Assignment\obj\Debug\Assignment.Properties.Resources.resources
+H:\dhdms\Git\C_Lang\C#\Assignment\Assignment\obj\Debug\Assignment.csproj.GenerateResource.cache
+H:\dhdms\Git\C_Lang\C#\Assignment\Assignment\obj\Debug\Assignment.csproj.CoreCompileInputs.cache
+H:\dhdms\Git\C_Lang\C#\Assignment\Assignment\obj\Debug\Assignment.exe
+H:\dhdms\Git\C_Lang\C#\Assignment\Assignment\obj\Debug\Assignment.pdb
