@@ -29,41 +29,41 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.mkAll = new System.Windows.Forms.Button();
-            this.mkSep = new System.Windows.Forms.Button();
-            this.mkbtn = new System.Windows.Forms.Button();
+            this.MkAll = new System.Windows.Forms.Button();
+            this.MkOne = new System.Windows.Forms.Button();
+            this.MkSeperate = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // mkAll
+            // MkAll
             // 
-            this.mkAll.Location = new System.Drawing.Point(12, 12);
-            this.mkAll.Name = "mkAll";
-            this.mkAll.Size = new System.Drawing.Size(75, 23);
-            this.mkAll.TabIndex = 0;
-            this.mkAll.Text = "한방에";
-            this.mkAll.UseVisualStyleBackColor = true;
-            this.mkAll.Click += new System.EventHandler(this.button1_Click);
+            this.MkAll.Location = new System.Drawing.Point(12, 12);
+            this.MkAll.Name = "MkAll";
+            this.MkAll.Size = new System.Drawing.Size(75, 23);
+            this.MkAll.TabIndex = 0;
+            this.MkAll.Text = "한방에";
+            this.MkAll.UseVisualStyleBackColor = true;
+            this.MkAll.Click += new System.EventHandler(this.MkAll_Click);
             // 
-            // mkSep
+            // MkOne
             // 
-            this.mkSep.Location = new System.Drawing.Point(178, 12);
-            this.mkSep.Name = "mkSep";
-            this.mkSep.Size = new System.Drawing.Size(75, 23);
-            this.mkSep.TabIndex = 1;
-            this.mkSep.Text = "하나씩";
-            this.mkSep.UseVisualStyleBackColor = true;
-            this.mkSep.Click += new System.EventHandler(this.mkSep_Click);
+            this.MkOne.Location = new System.Drawing.Point(178, 12);
+            this.MkOne.Name = "MkOne";
+            this.MkOne.Size = new System.Drawing.Size(75, 23);
+            this.MkOne.TabIndex = 1;
+            this.MkOne.Text = "하나씩";
+            this.MkOne.UseVisualStyleBackColor = true;
+            this.MkOne.Click += new System.EventHandler(this.MkOne_Click);
             // 
-            // mkbtn
+            // MkSeperate
             // 
-            this.mkbtn.Location = new System.Drawing.Point(352, 11);
-            this.mkbtn.Name = "mkbtn";
-            this.mkbtn.Size = new System.Drawing.Size(75, 23);
-            this.mkbtn.TabIndex = 2;
-            this.mkbtn.Text = "뉴버튼클릭";
-            this.mkbtn.UseVisualStyleBackColor = true;
-            this.mkbtn.Click += new System.EventHandler(this.mkbtn_Click);
+            this.MkSeperate.Location = new System.Drawing.Point(352, 11);
+            this.MkSeperate.Name = "MkSeperate";
+            this.MkSeperate.Size = new System.Drawing.Size(75, 23);
+            this.MkSeperate.TabIndex = 2;
+            this.MkSeperate.Text = "뉴버튼클릭";
+            this.MkSeperate.UseVisualStyleBackColor = true;
+            this.MkSeperate.Click += new System.EventHandler(this.MkSeperate_Click);
             // 
             // timer1
             // 
@@ -76,9 +76,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.mkbtn);
-            this.Controls.Add(this.mkAll);
-            this.Controls.Add(this.mkSep);
+            this.Controls.Add(this.MkSeperate);
+            this.Controls.Add(this.MkAll);
+            this.Controls.Add(this.MkOne);
             this.Name = "Form1";
             this.Text = "Form1";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
@@ -89,9 +89,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button mkAll;
-        private System.Windows.Forms.Button mkSep;
-        private System.Windows.Forms.Button mkbtn;
+        private System.Windows.Forms.Button MkAll;
+        private System.Windows.Forms.Button MkOne;
+        private System.Windows.Forms.Button MkSeperate;
         private System.Windows.Forms.Timer timer1;
     }
 }

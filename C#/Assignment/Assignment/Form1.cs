@@ -21,26 +21,26 @@ namespace Assignment
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void MkAll_Click(object sender, EventArgs e)
         {
             for (int i = 1; i < 5; i++)
             {
                 Button child = new Button();
                 Controls.Add(child);
-                child.Location = new Point(mkAll.Location.X,mkAll.Location.Y+(23+3)*i);
+                child.Location = new Point(MkAll.Location.X,MkAll.Location.Y+(23+3)*i);
                 child.Text = "동적생성" + i + "번째";
                 child.Width = 100;
             }
             
         }
 
-        private void mkSep_Click(object sender, EventArgs e)
+        private void MkOne_Click(object sender, EventArgs e)
         {
             Button child = new Button();
             Controls.Add(child);
             if(tmp_location == 1)
             {
-                child.Location = new Point(mkSep.Location.X, mkSep.Location.Y + (23 + 3));
+                child.Location = new Point(MkOne.Location.X, MkOne.Location.Y + (23 + 3));
                 child.Text = "동적생성" + tmp_location +"번째";
                 child.Width = 100;
                 tmp_location++;
@@ -48,7 +48,7 @@ namespace Assignment
             else
             {
                 
-                child.Location = new Point(mkSep.Location.X, mkSep.Location.Y + (23 + 3) * tmp_location);
+                child.Location = new Point(MkOne.Location.X, MkOne.Location.Y + (23 + 3) * tmp_location);
                 child.Text = "동적생성" + tmp_location + "번째";
                 child.Width = 100;
                 tmp_location++;
@@ -61,23 +61,23 @@ namespace Assignment
 
         }
 
-        private void mkbtn_Click(object sender, EventArgs e)
+        private void MkSeperate_Click(object sender, EventArgs e)
         {
             Button child = new Button();
             Controls.Add(child);
             child.Width = 100;
             if(tmp_location2 == 1)
             {
-                child.Location = new Point(mkbtn.Location.X, mkbtn.Location.Y + (23 + 3));
+                child.Location = new Point(MkSeperate.Location.X, MkSeperate.Location.Y + (23 + 3));
                 child.Text = "동적생성" + tmp_location2 + "번째";
-                child.Click += mkbtn_Click;
+                child.Click += MkSeperate_Click;
                 tmp_location2++;
             }
             else
             {
-                child.Location = new Point(mkbtn.Location.X, mkbtn.Location.Y + (23 + 3)*tmp_location2);
+                child.Location = new Point(MkSeperate.Location.X, MkSeperate.Location.Y + (23 + 3)*tmp_location2);
                 child.Text = "동적생성" + tmp_location2 + "번째";
-                child.Click += mkbtn_Click;
+                child.Click += MkSeperate_Click;
                 tmp_location2++;
             }
         }
