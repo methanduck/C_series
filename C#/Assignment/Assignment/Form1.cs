@@ -12,8 +12,8 @@ namespace Assignment
 {
     public partial class Form1 : Form
     {
-        int tmp_location =1 ;
-        int tmp_location2 = 1;
+        int Onebtn_Count =1 ;
+        int Sepbtn_Count = 1;
         int elapsed=0;
 
         public Form1()
@@ -38,20 +38,20 @@ namespace Assignment
         {
             Button child = new Button();
             Controls.Add(child);
-            if(tmp_location == 1)
+            if(Onebtn_Count == 1)
             {
                 child.Location = new Point(MkOne.Location.X, MkOne.Location.Y + (23 + 3));
-                child.Text = "동적생성" + tmp_location +"번째";
+                child.Text = "동적생성" + Onebtn_Count +"번째";
                 child.Width = 100;
-                tmp_location++;
+                Onebtn_Count++;
             }
             else
             {
                 
-                child.Location = new Point(MkOne.Location.X, MkOne.Location.Y + (23 + 3) * tmp_location);
-                child.Text = "동적생성" + tmp_location + "번째";
+                child.Location = new Point(MkOne.Location.X, MkOne.Location.Y + (23 + 3) * Onebtn_Count);
+                child.Text = "동적생성" + Onebtn_Count + "번째";
                 child.Width = 100;
-                tmp_location++;
+                Onebtn_Count++;
             }
             
         }
@@ -66,19 +66,19 @@ namespace Assignment
             Button child = new Button();
             Controls.Add(child);
             child.Width = 100;
-            if(tmp_location2 == 1)
+            if(Sepbtn_Count == 1)
             {
                 child.Location = new Point(MkSeperate.Location.X, MkSeperate.Location.Y + (23 + 3));
-                child.Text = "동적생성" + tmp_location2 + "번째";
+                child.Text = "동적생성" + Sepbtn_Count + "번째";
                 child.Click += MkSeperate_Click;
-                tmp_location2++;
+                Sepbtn_Count++;
             }
             else
             {
-                child.Location = new Point(MkSeperate.Location.X, MkSeperate.Location.Y + (23 + 3)*tmp_location2);
-                child.Text = "동적생성" + tmp_location2 + "번째";
+                child.Location = new Point(MkSeperate.Location.X, MkSeperate.Location.Y + (23 + 3)*Sepbtn_Count);
+                child.Text = "동적생성" + Sepbtn_Count + "번째";
                 child.Click += MkSeperate_Click;
-                tmp_location2++;
+                Sepbtn_Count++;
             }
         }
 
@@ -90,14 +90,17 @@ namespace Assignment
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
            
-            MessageBox.Show("버튼지울까요", "", MessageBoxButtons.YesNo);
-            Controls.Clear();
+            DialogResult result = MessageBox.Show("버튼지울까요", "", MessageBoxButtons.YesNo);
+            if(result == DialogResult.Yes)
+            {
+                Controls.Clear();
+            }
+            
             MessageBox.Show("경과된 시간은" + elapsed + "초입니다.");
         }
 
         private static MessageBoxButtons GetYesNo()
         {
-           
             return MessageBoxButtons.YesNo;
         }
     }
