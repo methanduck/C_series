@@ -13,8 +13,8 @@ namespace Assignment_2
     
     public partial class Main_Window : Form
     {
-         int count = 1;
-        Stack<New_Window> Win_list = new Stack<New_Window>();
+         int count = 0;
+        Stack<Form> Win_list = new Stack<Form>();
         public Main_Window()
         {
             InitializeComponent();
@@ -34,7 +34,7 @@ namespace Assignment_2
         {
             if (Win_list.Count != 0)
             {
-                New_Window del = Win_list.Pop();
+                Form del = Win_list.Pop();
                 del.Close();
                 del.Dispose();
             }
@@ -50,7 +50,7 @@ namespace Assignment_2
         {
             this.count++;
         }
-        public void addStack(New_Window input)
+        public void addStack(Form input)
         {
             this.Win_list.Push(input);
         }
