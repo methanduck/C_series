@@ -14,7 +14,7 @@ namespace Assignment_3
     {
         float tmp_Num=0,tmp_newNum=0;
         string tmp_oper = string.Empty;
-        bool Used = false, Ck_add = false , txt_Append = true; // add true 일때 연산가면 안돼
+        bool Used = false, Ck_add = false , txt_Append = true; 
         public Form1()
         {
             InitializeComponent();
@@ -136,11 +136,6 @@ namespace Assignment_3
             this.btn_Numclick(0);
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Mid_Calc(float input1,float input2,string param)
         {
             switch(param)
@@ -169,7 +164,7 @@ namespace Assignment_3
                     Txt_input.Text = Convert.ToString(this.tmp_Num);
                     break;
             }
-            Ck_add = true; //한단계 계산을 끝 마친 상태 
+            Ck_add = true;
             txt_Append = true;
         }
 
@@ -199,22 +194,12 @@ namespace Assignment_3
             }
             else
             {
-                /*if(Ck_add) //연산 과정 진행중 
-                {
-                    tmp_Num =float.Parse(this.Txt_input.Text);
-                    tmp_oper = Operator;
-                    Txt_show.Text = Operator;
-                    Txt_input.Text = string.Empty;
-                    Ck_add = false;
-                }
-                else//과정 완료 (연산자가 =역할)*/
-                {
+
                 tmp_newNum = float.Parse(Txt_input.Text);
                     this.tmp_oper = this.Txt_show.Text;
                 this.Mid_Calc(tmp_Num, tmp_newNum, this.tmp_oper);
                 this.tmp_newNum = 0;
                 Txt_show.Text = Operator;
-                }
             }
         }
     }

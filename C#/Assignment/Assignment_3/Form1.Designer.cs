@@ -58,7 +58,6 @@
             this.Txt_input.Name = "Txt_input";
             this.Txt_input.Size = new System.Drawing.Size(406, 40);
             this.Txt_input.TabIndex = 0;
-            this.Txt_input.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Txt_show
             // 
