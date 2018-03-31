@@ -227,15 +227,18 @@ namespace Assignment_3
         private void btn_Resclick(string input_Op)
         {
             this.tmp_newNum = float.Parse(this.Txt_input.Text);
-            this.Txt_input.Text = string.Empty;
-            if (tmp_newNum == 0 || tmp_Num.Equals(string.Empty))
+
+            if (tmp_newNum == 0 || tmp_Num.Equals(string.Empty) || input_Op.Equals(string.Empty))
             {
-                Txt_input.Text = "피연산자 값이 부족합니다.";
+                this.Txt_input.Text = string.Empty;
+                Txt_input.Text = "연산자 또는 피연산자 값이 부족합니다.";
+            }
+            else if(this.Txt_show.Text.Equals("="))
+            {
+                return;
             }
             else
-            {
                 this.Mid_Calc(tmp_Num, tmp_newNum, this.tmp_oper);
-            }
             this.Txt_show.Text = input_Op;
             txt_Append = true;
         }
