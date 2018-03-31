@@ -57,17 +57,8 @@ namespace Assignment_3
 
         private void Btn_res_Click(object sender, EventArgs e)
         {
-         //   this.tmp_newNum = float.Parse(this.Txt_input.Text);
-            this.Txt_input.Text = string.Empty;
-            if(tmp_newNum == 0 || tmp_Num.Equals(string.Empty))
-            {
-                Txt_input.Text = "피연산자 값이 부족합니다.";
-            }
-            else
-            {
-             this.Mid_Calc(tmp_Num, tmp_newNum, this.Txt_show.Text);
-            }
-             this.Txt_show.Text = "=";
+            this.btn_Resclick("=");
+            this.Used = false;
         }
 
         private void Btn_mul_Click(object sender, EventArgs e)
@@ -93,6 +84,7 @@ namespace Assignment_3
             this.tmp_Num = 0;
             this.Used = false;
             this.Ck_add = false;
+            this.txt_Append = true;
         }
 
         private void Num_7_Click(object sender, EventArgs e)
@@ -122,7 +114,10 @@ namespace Assignment_3
 
         private void Btn_div1_Click(object sender, EventArgs e)
         {
-
+            this.tmp_Num = 1 / float.Parse(this.Txt_input.Text);
+            this.Txt_input.Text = Convert.ToString(tmp_Num);
+            Used = false;
+            txt_Append = true;
         }
 
         private void Num_2_Click(object sender, EventArgs e)
@@ -148,10 +143,12 @@ namespace Assignment_3
                     this.tmp_Num= input1 + input2;
                     Txt_input.Text = Convert.ToString(this.tmp_Num);
                     break;
+
                 case "-":
                     this.tmp_Num= input1 - input2;
                     Txt_input.Text = Convert.ToString(this.tmp_Num);
                     break;
+
                 case "/":
                     if(input1 == 0)
                     {
@@ -163,6 +160,7 @@ namespace Assignment_3
                         Txt_input.Text = Convert.ToString(this.tmp_Num);
                     }
                     break;
+
                 case "*":
                     this.tmp_Num= input1 * input2;
                     Txt_input.Text = Convert.ToString(this.tmp_Num);
@@ -193,32 +191,41 @@ namespace Assignment_3
 
         private void btn_Opclick(string Operator)
         {
-            if (Used == false)
+            if(!Used)
             {
+              
                 tmp_Num = float.Parse(Txt_input.Text);
-                Txt_show.Text = Operator;
+                this.Txt_show.Text = Operator;
+                if (Ck_add)
                 this.Txt_input.Text = Convert.ToString(0);
                 this.tmp_oper = Operator;
                 Used = true;
+                txt_Append = true;
             }
             else
             {
-                if(Ck_add) //연산 과정 진행중 
-                {
-                    tmp_Num =float.Parse(this.Txt_input.Text);
-                    tmp_oper = Operator;
-                    Txt_show.Text = Operator;
-                    Txt_input.Text = string.Empty;
-                    Ck_add = false;
-                }
-                else//과정 완료 (연산자가 =역할)
-                {
-                tmp_newNum = float.Parse(Txt_input.Text);
-                this.Mid_Calc(tmp_Num, tmp_newNum, this.tmp_oper);
-                this.tmp_newNum = 0;
-                Txt_show.Text = Operator;
-                }
+                this.tmp_newNum = float.Parse(this.Txt_input.Text);
+                this.btn_Resclick(Operator);
+                this.Txt_show.Text = Operator;
+                this.tmp_oper = Operator;
+                Ck_add = true;
             }
+        }
+
+        private void btn_Resclick(string input_Op)
+        {
+            this.tmp_newNum = float.Parse(this.Txt_input.Text);
+            this.Txt_input.Text = string.Empty;
+            if (tmp_newNum == 0 || tmp_Num.Equals(string.Empty))
+            {
+                Txt_input.Text = "피연산자 값이 부족합니다.";
+            }
+            else
+            {
+                this.Mid_Calc(tmp_Num, tmp_newNum, this.tmp_oper);
+            }
+            this.Txt_show.Text = input_Op;
+            txt_Append = true;
         }
     }
 }
