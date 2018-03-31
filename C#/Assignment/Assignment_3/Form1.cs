@@ -12,10 +12,9 @@ namespace Assignment_3
 {
     public partial class Form1 : Form
     {
-        float tmp_Num,tmp_newNum, res_Num;
-        string tmp_arg;
-        bool Used = false;
-        bool Ck_add = false;
+        float tmp_Num=0,tmp_newNum=0;
+        string tmp_oper = string.Empty;
+        bool Used = false, Ck_add = true , txt_Append = true;
         public Form1()
         {
             InitializeComponent();
@@ -28,62 +27,17 @@ namespace Assignment_3
 
         private void Num_8_Click(object sender, EventArgs e)
         {
-            if (!Txt_input.Equals("0"))
-            {
-                if (Used == true)
-                {
-                    this.Txt_input.Text = "";
-                    this.Txt_input.AppendText("8");
-                }
-                else
-                    this.Txt_input.AppendText("8");
-            }
-
-            else
-            {
-                this.Txt_input.Text = "";
-                this.Txt_input.Text += "8";
-            }
+            this.btn_Numclick(8);
         }
 
         private void Btn_plus_Click(object sender, EventArgs e)
         {
-            if (Used == false)
-            {
-                tmp_Num = float.Parse(Txt_input.Text);
-                Txt_show.Text += "+";
-                Used = true;
-                this.Txt_input.Text = "";
-                this.tmp_arg = "+";
-            }
-            else
-            {
-                tmp_newNum = float.Parse(Txt_input.Text);
-                this.Txt_input.Text = "";
-                 this.tmp_Num = this.Mid_Calc(tmp_Num, tmp_newNum, this.tmp_arg);
-                Txt_input.Text = Convert.ToString(this.tmp_Num);
-                Txt_show.Text = "";
-                Txt_show.Text += "+";
-            }
+            this.btn_Opclick("+");
         }
 
         private void Num_1_Click(object sender, EventArgs e)
         {
-            if (!Txt_input.Equals("0"))
-            {   if (Ck_add == true)
-                {
-                    this.Txt_input.Text = "";
-                    this.Txt_input.AppendText("1");
-                    Ck_add = false;
-                }
-            else
-                    this.Txt_input.AppendText("1");}
-              
-            else
-            {
-                this.Txt_input.Text = "";
-                this.Txt_input.Text += "1";
-            }
+            this.btn_Numclick(1);
         }
 
         private void Btn_dot_Click(object sender, EventArgs e)
@@ -93,94 +47,37 @@ namespace Assignment_3
 
         private void Num_3_Click(object sender, EventArgs e)
         {
-            if (!Txt_input.Equals("0"))
-            {
-                if (Ck_add == true)
-                {
-                    this.Txt_input.Text = "";
-                    this.Txt_input.AppendText("3");
-                    Ck_add = false;
-                }
-                else
-                    this.Txt_input.AppendText("3");
-            }
-
-            else
-            {
-                this.Txt_input.Text = "";
-                this.Txt_input.Text += "3";
-            }
+            this.btn_Numclick(3);
         }
 
         private void Btn_sub_Click(object sender, EventArgs e)
         {
-            if (Used == false)
-            {
-                tmp_Num = float.Parse(Txt_input.Text);
-                Txt_show.Text += "-";
-                Used = true;
-                this.Txt_input.Text = "";
-                this.tmp_arg = "-";
-            }
-            else
-            {
-                tmp_newNum = float.Parse(Txt_input.Text);
-                this.Txt_input.Text = "";
-                this.tmp_Num = this.Mid_Calc(tmp_Num, tmp_newNum, this.tmp_arg);
-                Txt_input.Text = Convert.ToString(this.tmp_Num);
-                Txt_show.Text = "";
-                Txt_show.Text += "-";
-            }
+            this.btn_Opclick("-");
         }
 
         private void Btn_res_Click(object sender, EventArgs e)
         {
-                this.tmp_newNum = float.Parse(this.Txt_input.Text);
-            this.Txt_input.Text = "";
-            this.Txt_input.Text += this.Mid_Calc(tmp_Num, tmp_newNum, this.Txt_show.Text);
-            this.Txt_show.Text += "=";
+         //   this.tmp_newNum = float.Parse(this.Txt_input.Text);
+            this.Txt_input.Text = string.Empty;
+            if(tmp_newNum == 0 || tmp_Num.Equals(string.Empty))
+            {
+                Txt_input.Text = "피연산자 값이 부족합니다.";
+            }
+            else
+            {
+             this.Mid_Calc(tmp_Num, tmp_newNum, this.Txt_show.Text);
+            }
+             this.Txt_show.Text = "=";
         }
 
         private void Btn_mul_Click(object sender, EventArgs e)
         {
-            if (Used == false)
-            {
-                tmp_Num = float.Parse(Txt_input.Text);
-                Txt_show.Text += "*";
-                Used = true;
-                this.Txt_input.Text = "";
-                this.tmp_arg = "*";
-            }
-            else
-            {
-                tmp_newNum = float.Parse(Txt_input.Text);
-                this.Txt_input.Text = "";
-                this.tmp_Num = this.Mid_Calc(tmp_Num, tmp_newNum, this.tmp_arg);
-                Txt_input.Text = Convert.ToString(this.tmp_Num);
-                Txt_show.Text += "*";
-                this.Txt_show.Text = "";
-            }
-
+            this.btn_Opclick("*");
         }
 
         private void Num_6_Click(object sender, EventArgs e)
         {
-            if (!Txt_input.Equals("0"))
-            {
-                if (Used == true)
-                {
-                    this.Txt_input.Text = "";
-                    this.Txt_input.AppendText("6");
-                }
-                else
-                    this.Txt_input.AppendText("6");
-            }
-
-            else
-            {
-                this.Txt_input.Text = "";
-                this.Txt_input.Text += "6";
-            }
+            this.btn_Numclick(6);
         }
 
         private void Btn_CE_Click(object sender, EventArgs e)
@@ -192,162 +89,50 @@ namespace Assignment_3
         {
             this.Txt_input.Text = "0";
             this.Txt_show.Text = "";
+            this.tmp_newNum = 0;
+            this.tmp_Num = 0;
+            this.Used = false;
+            this.Ck_add = false;
         }
 
         private void Num_7_Click(object sender, EventArgs e)
         {
-            if (!Txt_input.Equals("0"))
-            {
-                if (Used == true)
-                {
-                    this.Txt_input.Text = "";
-                    this.Txt_input.AppendText("7");
-                }
-                else
-                    this.Txt_input.AppendText("7");
-            }
-
-            else
-            {
-                this.Txt_input.Text = "";
-                this.Txt_input.Text += "7";
-            }
+            this.btn_Numclick(7);
         }
 
         private void Num_9_Click(object sender, EventArgs e)
         {
-            if (!Txt_input.Equals("0"))
-            {
-                if (Used == true)
-                {
-                    this.Txt_input.Text = "";
-                    this.Txt_input.AppendText("9");
-                }
-                else
-                    this.Txt_input.AppendText("9");
-            }
-
-            else
-            {
-                this.Txt_input.Text = "";
-                this.Txt_input.Text += "9";
-            }
+            this.btn_Numclick(9);
         }
 
         private void Btn_div_Click(object sender, EventArgs e)
         {
-
-            if (Used == false)
-            {
-                tmp_Num = float.Parse(Txt_input.Text);
-                Txt_show.Text += "/";
-                Used = true;
-                this.Txt_input.Text = "";
-                this.tmp_arg = "/";
-            }
-            else
-            {
-                tmp_newNum = float.Parse(Txt_input.Text);
-                this.Txt_input.Text = "";
-                this.tmp_Num = this.Mid_Calc(tmp_Num, tmp_newNum, this.tmp_arg);
-                Txt_input.Text = Convert.ToString(this.tmp_Num);
-                this.Txt_show.Text = "";
-                Txt_show.Text += "/";
-            }
-
-
+            this.btn_Opclick("/");
         }
 
         private void Num_4_Click(object sender, EventArgs e)
         {
-            if (!Txt_input.Equals("0"))
-            {
-                if (Used == true)
-                {
-                    this.Txt_input.Text = "";
-                    this.Txt_input.AppendText("4");
-                }
-                else
-                    this.Txt_input.AppendText("4");
-            }
-
-            else
-            {
-                this.Txt_input.Text = "";
-                this.Txt_input.Text += "4";
-            }
+            this.btn_Numclick(4);
         }
 
         private void Num_5_Click(object sender, EventArgs e)
         {
-            if (!Txt_input.Equals("0"))
-            {
-                if (Used == true)
-                {
-                    this.Txt_input.Text = "";
-                    this.Txt_input.AppendText("5");
-                }
-                else
-                    this.Txt_input.AppendText("5");
-            }
-
-            else
-            {
-                this.Txt_input.Text = "";
-                this.Txt_input.Text += "5";
-            }
+            this.btn_Numclick(5);
         }
 
         private void Btn_div1_Click(object sender, EventArgs e)
         {
-            if(Used == false)
-            {
-                tmp_Num = float.Parse(Txt_input.Text);
-                Txt_show.Text += "1/x";
-                Txt_input.Text += 0;
-                Used = true;
-            }
-            else
-            {
-            tmp_newNum = float.Parse(Txt_input.Text);
-            Txt_input.Text+= this.tmp_Num = this.Mid_Calc(tmp_Num, tmp_newNum, "/");
-            Txt_show.Text += "1/x";
-            }
+
         }
 
         private void Num_2_Click(object sender, EventArgs e)
         {
-            if (!Txt_input.Equals("0"))
-            {
-                if (Ck_add == true)
-                {
-                    this.Txt_input.Text = "";
-                    this.Txt_input.AppendText("2");
-                    Ck_add = false;
-                }
-                else
-                    this.Txt_input.AppendText("2");
-            }
-
-            else
-            {
-                this.Txt_input.Text = "";
-                this.Txt_input.Text += "2";
-            }
+            this.btn_Numclick(2);
         }
 
         private void Num_0_Click(object sender, EventArgs e)
         {
-            if (float.Parse(this.Txt_input.Text) > 0)
-            {
-                this.Txt_input.AppendText("0");
-            }
-            else
-            {
-                this.Txt_input.Text = "";
-                this.Txt_input.Text += "0";
-            }
-
+            this.btn_Numclick(0);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -355,26 +140,85 @@ namespace Assignment_3
 
         }
 
-        private float Mid_Calc(float input1,float input2,string param)
+        private void Mid_Calc(float input1,float input2,string param)
         {
-            float result=0;
             switch(param)
             {
                 case "+":
-                    result= input1 + input2;
+                    this.tmp_Num= input1 + input2;
+                    Txt_input.Text = Convert.ToString(this.tmp_Num);
                     break;
                 case "-":
-                    result= input1 - input2;
+                    this.tmp_Num= input1 - input2;
+                    Txt_input.Text = Convert.ToString(this.tmp_Num);
                     break;
                 case "/":
-                    result= input1 / input2;
+                    if(input1 == 0)
+                    {
+                        Txt_input.Text = "0을 나눌 수 없습니다.";
+                    }
+                    else
+                    {
+                    this.tmp_Num= input1 / input2;
+                        Txt_input.Text = Convert.ToString(this.tmp_Num);
+                    }
                     break;
                 case "*":
-                    result= input1 * input2;
+                    this.tmp_Num= input1 * input2;
+                    Txt_input.Text = Convert.ToString(this.tmp_Num);
                     break;
             }
-            Ck_add = true;
-            return result;
+            Ck_add = true; //한단계 계산을 끝 마친 상태 
+            txt_Append = true;
+        }
+
+        private void btn_Numclick(int Num)
+        {
+            if(Txt_input.Text.Equals("0") || Ck_add)
+            {
+                if(txt_Append)
+                {
+                    this.Txt_input.Text = string.Empty;
+                    this.Txt_input.Text = Convert.ToString(Num);
+                    txt_Append = false;
+                }
+                else
+                {
+                    this.Txt_input.Text += Convert.ToString(Num);
+                }
+            }
+            else
+            this.Txt_input.Text += Convert.ToString(Num);
+        }
+
+        private void btn_Opclick(string Operator)
+        {
+            if (Used == false)
+            {
+                tmp_Num = float.Parse(Txt_input.Text);
+                Txt_show.Text = Operator;
+                this.Txt_input.Text = Convert.ToString(0);
+                this.tmp_oper = Operator;
+                Used = true;
+            }
+            else
+            {
+                if(Ck_add) //연산 과정 진행중 
+                {
+                    tmp_Num =float.Parse(this.Txt_input.Text);
+                    tmp_oper = Operator;
+                    Txt_show.Text = Operator;
+                    Txt_input.Text = string.Empty;
+                    Ck_add = false;
+                }
+                else//과정 완료 (연산자가 =역할)
+                {
+                tmp_newNum = float.Parse(Txt_input.Text);
+                this.Mid_Calc(tmp_Num, tmp_newNum, this.tmp_oper);
+                this.tmp_newNum = 0;
+                Txt_show.Text = Operator;
+                }
+            }
         }
     }
 }
