@@ -14,7 +14,7 @@ namespace Assignment_3
     {
         float tmp_Num=0,tmp_newNum=0;
         string tmp_oper = string.Empty;
-        bool Used = false, Ck_add = true , txt_Append = true;
+        bool Used = false, Ck_add = false , txt_Append = true; // add true 일때 연산가면 안돼
         public Form1()
         {
             InitializeComponent();
@@ -57,16 +57,16 @@ namespace Assignment_3
 
         private void Btn_res_Click(object sender, EventArgs e)
         {
-         //   this.tmp_newNum = float.Parse(this.Txt_input.Text);
-            this.Txt_input.Text = string.Empty;
-            if(tmp_newNum == 0 || tmp_Num.Equals(string.Empty))
+            if(Used && (this.Txt_input.Text.Equals(string.Empty)||this.Txt_input.Text.Equals("0")))
             {
                 Txt_input.Text = "피연산자 값이 부족합니다.";
             }
             else
             {
+                tmp_newNum = float.Parse(this.Txt_input.Text);
              this.Mid_Calc(tmp_Num, tmp_newNum, this.Txt_show.Text);
             }
+            this.tmp_newNum = 0;
              this.Txt_show.Text = "=";
         }
 
@@ -93,6 +93,7 @@ namespace Assignment_3
             this.tmp_Num = 0;
             this.Used = false;
             this.Ck_add = false;
+            this.txt_Append = true;
         }
 
         private void Num_7_Click(object sender, EventArgs e)
@@ -174,18 +175,12 @@ namespace Assignment_3
 
         private void btn_Numclick(int Num)
         {
-            if(Txt_input.Text.Equals("0") || Ck_add)
+            if((Txt_input.Text.Equals("0") || Ck_add )&& txt_Append)
             {
-                if(txt_Append)
-                {
                     this.Txt_input.Text = string.Empty;
                     this.Txt_input.Text = Convert.ToString(Num);
                     txt_Append = false;
-                }
-                else
-                {
-                    this.Txt_input.Text += Convert.ToString(Num);
-                }
+                
             }
             else
             this.Txt_input.Text += Convert.ToString(Num);
@@ -200,10 +195,11 @@ namespace Assignment_3
                 this.Txt_input.Text = Convert.ToString(0);
                 this.tmp_oper = Operator;
                 Used = true;
+                txt_Append = true;
             }
             else
             {
-                if(Ck_add) //연산 과정 진행중 
+                /*if(Ck_add) //연산 과정 진행중 
                 {
                     tmp_Num =float.Parse(this.Txt_input.Text);
                     tmp_oper = Operator;
@@ -211,9 +207,10 @@ namespace Assignment_3
                     Txt_input.Text = string.Empty;
                     Ck_add = false;
                 }
-                else//과정 완료 (연산자가 =역할)
+                else//과정 완료 (연산자가 =역할)*/
                 {
                 tmp_newNum = float.Parse(Txt_input.Text);
+                    this.tmp_oper = this.Txt_show.Text;
                 this.Mid_Calc(tmp_Num, tmp_newNum, this.tmp_oper);
                 this.tmp_newNum = 0;
                 Txt_show.Text = Operator;
