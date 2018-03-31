@@ -73,13 +73,25 @@ namespace Assignment_3
 
         private void Btn_CE_Click(object sender, EventArgs e)
         {
-            this.Txt_input.Text.TrimEnd();
+            if (this.Txt_input.Text.Length == 1)
+            {
+                this.Txt_input.Text = this.Txt_input.Text.Substring(0, Txt_input.Text.Length - 1);
+                this.Txt_input.Text = "0";
+                this.txt_Append = true;
+            }
+            else if(this.Txt_input.Text.Length == 0)
+            {            }
+            else
+                this.Txt_input.Text = this.Txt_input.Text.Substring(0, Txt_input.Text.Length - 1);
+
+            if (Used)
+                this.Btn_C.PerformClick();
         }
 
         private void Btn_C_Click(object sender, EventArgs e)
         {
             this.Txt_input.Text = "0";
-            this.Txt_show.Text = "";
+            this.Txt_show.Text = string.Empty;
             this.tmp_newNum = 0;
             this.tmp_Num = 0;
             this.Used = false;
