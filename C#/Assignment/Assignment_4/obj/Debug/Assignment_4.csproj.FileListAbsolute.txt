@@ -1,0 +1,10 @@
+H:\dhdms\Git\C_Lang\Visualstudio\C#\Assignment\Assignment_4\bin\Debug\Assignment_4.exe.config
+H:\dhdms\Git\C_Lang\Visualstudio\C#\Assignment\Assignment_4\bin\Debug\Assignment_4.exe
+H:\dhdms\Git\C_Lang\Visualstudio\C#\Assignment\Assignment_4\bin\Debug\Assignment_4.pdb
+H:\dhdms\Git\C_Lang\Visualstudio\C#\Assignment\Assignment_4\obj\Debug\Assignment_4.csprojResolveAssemblyReference.cache
+H:\dhdms\Git\C_Lang\Visualstudio\C#\Assignment\Assignment_4\obj\Debug\Assignment_4.Form1.resources
+H:\dhdms\Git\C_Lang\Visualstudio\C#\Assignment\Assignment_4\obj\Debug\Assignment_4.Properties.Resources.resources
+H:\dhdms\Git\C_Lang\Visualstudio\C#\Assignment\Assignment_4\obj\Debug\Assignment_4.csproj.GenerateResource.cache
+H:\dhdms\Git\C_Lang\Visualstudio\C#\Assignment\Assignment_4\obj\Debug\Assignment_4.csproj.CoreCompileInputs.cache
+H:\dhdms\Git\C_Lang\Visualstudio\C#\Assignment\Assignment_4\obj\Debug\Assignment_4.exe
+H:\dhdms\Git\C_Lang\Visualstudio\C#\Assignment\Assignment_4\obj\Debug\Assignment_4.pdb
