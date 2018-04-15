@@ -18,3 +18,13 @@ F:\Download\학교\Source\Visualstudio\C#\Assignment\Assignment_3\obj\Debug\Assi
 F:\Download\학교\Source\Visualstudio\C#\Assignment\Assignment_3\obj\Debug\Assignment_3.csproj.CoreCompileInputs.cache
 F:\Download\학교\Source\Visualstudio\C#\Assignment\Assignment_3\obj\Debug\Assignment_3.exe
 F:\Download\학교\Source\Visualstudio\C#\Assignment\Assignment_3\obj\Debug\Assignment_3.pdb
+E:\dhdms\Git\Visualstudio\C#\Assignment\Assignment_3\bin\Debug\Assignment_3.exe.config
+E:\dhdms\Git\Visualstudio\C#\Assignment\Assignment_3\bin\Debug\Assignment_3.exe
+E:\dhdms\Git\Visualstudio\C#\Assignment\Assignment_3\bin\Debug\Assignment_3.pdb
+E:\dhdms\Git\Visualstudio\C#\Assignment\Assignment_3\obj\Debug\Assignment_3.csprojResolveAssemblyReference.cache
+E:\dhdms\Git\Visualstudio\C#\Assignment\Assignment_3\obj\Debug\Assignment_3.Form1.resources
+E:\dhdms\Git\Visualstudio\C#\Assignment\Assignment_3\obj\Debug\Assignment_3.Properties.Resources.resources
+E:\dhdms\Git\Visualstudio\C#\Assignment\Assignment_3\obj\Debug\Assignment_3.csproj.GenerateResource.cache
+E:\dhdms\Git\Visualstudio\C#\Assignment\Assignment_3\obj\Debug\Assignment_3.csproj.CoreCompileInputs.cache
+E:\dhdms\Git\Visualstudio\C#\Assignment\Assignment_3\obj\Debug\Assignment_3.exe
+E:\dhdms\Git\Visualstudio\C#\Assignment\Assignment_3\obj\Debug\Assignment_3.pdb
