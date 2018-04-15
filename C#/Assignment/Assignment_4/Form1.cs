@@ -13,7 +13,7 @@ namespace Assignment_4
     public partial class Form1 : Form
     {
 
-        int temp, input_Num;
+         int temp, input_Num;
         public Form1()
         {
             InitializeComponent();

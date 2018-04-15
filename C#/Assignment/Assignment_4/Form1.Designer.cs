@@ -95,9 +95,9 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Font = new System.Drawing.Font("굴림", 13F);
-            this.groupBox1.Location = new System.Drawing.Point(241, 197);
+            this.groupBox1.Location = new System.Drawing.Point(174, 197);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(247, 186);
+            this.groupBox1.Size = new System.Drawing.Size(295, 186);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "원래 수";
@@ -106,21 +106,21 @@
             // 
             this.Txtbox_deciOrigin.Location = new System.Drawing.Point(113, 142);
             this.Txtbox_deciOrigin.Name = "Txtbox_deciOrigin";
-            this.Txtbox_deciOrigin.Size = new System.Drawing.Size(100, 27);
+            this.Txtbox_deciOrigin.Size = new System.Drawing.Size(134, 27);
             this.Txtbox_deciOrigin.TabIndex = 5;
             // 
             // Txtbox_hexOrigin
             // 
             this.Txtbox_hexOrigin.Location = new System.Drawing.Point(113, 78);
             this.Txtbox_hexOrigin.Name = "Txtbox_hexOrigin";
-            this.Txtbox_hexOrigin.Size = new System.Drawing.Size(100, 27);
+            this.Txtbox_hexOrigin.Size = new System.Drawing.Size(134, 27);
             this.Txtbox_hexOrigin.TabIndex = 4;
             // 
             // Txtbox_binOrigin
             // 
             this.Txtbox_binOrigin.Location = new System.Drawing.Point(113, 33);
             this.Txtbox_binOrigin.Name = "Txtbox_binOrigin";
-            this.Txtbox_binOrigin.Size = new System.Drawing.Size(100, 27);
+            this.Txtbox_binOrigin.Size = new System.Drawing.Size(134, 27);
             this.Txtbox_binOrigin.TabIndex = 3;
             // 
             // label5
@@ -161,7 +161,7 @@
             this.groupBox2.Font = new System.Drawing.Font("굴림", 13F);
             this.groupBox2.Location = new System.Drawing.Point(494, 197);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(247, 186);
+            this.groupBox2.Size = new System.Drawing.Size(294, 186);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "결과";
@@ -170,21 +170,21 @@
             // 
             this.Txtbox_deciRes.Location = new System.Drawing.Point(113, 142);
             this.Txtbox_deciRes.Name = "Txtbox_deciRes";
-            this.Txtbox_deciRes.Size = new System.Drawing.Size(100, 27);
+            this.Txtbox_deciRes.Size = new System.Drawing.Size(134, 27);
             this.Txtbox_deciRes.TabIndex = 5;
             // 
             // Txtbox_hexRes
             // 
             this.Txtbox_hexRes.Location = new System.Drawing.Point(113, 78);
             this.Txtbox_hexRes.Name = "Txtbox_hexRes";
-            this.Txtbox_hexRes.Size = new System.Drawing.Size(100, 27);
+            this.Txtbox_hexRes.Size = new System.Drawing.Size(134, 27);
             this.Txtbox_hexRes.TabIndex = 4;
             // 
             // Txtbox_binRes
             // 
             this.Txtbox_binRes.Location = new System.Drawing.Point(113, 33);
             this.Txtbox_binRes.Name = "Txtbox_binRes";
-            this.Txtbox_binRes.Size = new System.Drawing.Size(100, 27);
+            this.Txtbox_binRes.Size = new System.Drawing.Size(134, 27);
             this.Txtbox_binRes.TabIndex = 3;
             // 
             // label6
