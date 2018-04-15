@@ -65,7 +65,6 @@
             this.TxtBox_bitInput.Name = "TxtBox_bitInput";
             this.TxtBox_bitInput.Size = new System.Drawing.Size(100, 21);
             this.TxtBox_bitInput.TabIndex = 1;
-            this.TxtBox_bitInput.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label1
             // 
