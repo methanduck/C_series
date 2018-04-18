@@ -11,11 +11,11 @@ namespace ConsoleApplication1
         public Zookeeper()
         {
         }
-        public void Wash(String input)
+        public void Wash(Mammal input)
         {
-            Console.WriteLine("{0}를 Wash 합니다.", input);
+            Console.WriteLine("{0}를 Wash 합니다.", input.getName());
         }
-
+  
     }
 
     class Mammal
@@ -41,10 +41,11 @@ namespace ConsoleApplication1
             Mammal ele = new Mammal("elephant");
             Mammal li = new Mammal("lion");
             Zookeeper human = new Zookeeper();
-            human.Wash(dog.getName());
-            human.Wash(cat.getName());
-            human.Wash(ele.getName());
-            human.Wash(li.getName());
+
+            human.Wash(dog);
+            human.Wash(cat);
+            human.Wash(ele);
+            human.Wash(li);
         }
     };
 
