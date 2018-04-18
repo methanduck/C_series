@@ -1,0 +1,70 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Zookeeper
+    {
+        public Zookeeper()
+        {
+        }
+        public void Wash(String input)
+        {
+            Console.WriteLine("{0}를 Wash 합니다.", input);
+        }
+
+    }
+
+    class Mammal
+    {
+        protected String name;
+        public Mammal(String input)
+        {
+            this.name = input;
+        }
+        public String getName()
+        {
+            return this.name;
+        }
+    }
+
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Mammal dog = new Mammal("dog");
+            Mammal cat = new Mammal("cat");
+            Mammal ele = new Mammal("elephant");
+            Mammal li = new Mammal("lion");
+            Zookeeper human = new Zookeeper();
+            human.Wash(dog.getName());
+            human.Wash(cat.getName());
+            human.Wash(ele.getName());
+            human.Wash(li.getName());
+        }
+    };
+
+    class dog : Mammal
+    {
+        public dog() : base("dog") { }
+    }
+    class cat : Mammal
+    {
+        public cat() : base("cat") { }
+    }
+    class elephant : Mammal
+    {
+        public elephant() : base("elephant") { }
+    }
+    class lion : Mammal
+    {
+        public lion() : base("lion") { }
+    }
+
+
+}
+
