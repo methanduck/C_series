@@ -1,0 +1,7 @@
+H:\dhdms\Git\C_Lang\Visualstudio\C#\Assignment\Assignment_5\bin\Debug\Assignment_5.exe.config
+H:\dhdms\Git\C_Lang\Visualstudio\C#\Assignment\Assignment_5\bin\Debug\Assignment_5.exe
+H:\dhdms\Git\C_Lang\Visualstudio\C#\Assignment\Assignment_5\bin\Debug\Assignment_5.pdb
+H:\dhdms\Git\C_Lang\Visualstudio\C#\Assignment\Assignment_5\obj\Debug\Assignment_5.csprojResolveAssemblyReference.cache
+H:\dhdms\Git\C_Lang\Visualstudio\C#\Assignment\Assignment_5\obj\Debug\Assignment_5.csproj.CoreCompileInputs.cache
+H:\dhdms\Git\C_Lang\Visualstudio\C#\Assignment\Assignment_5\obj\Debug\Assignment_5.exe
+H:\dhdms\Git\C_Lang\Visualstudio\C#\Assignment\Assignment_5\obj\Debug\Assignment_5.pdb
