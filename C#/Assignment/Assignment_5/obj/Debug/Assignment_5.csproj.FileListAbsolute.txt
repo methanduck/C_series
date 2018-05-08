@@ -5,3 +5,10 @@ H:\dhdms\Git\C_Lang\Visualstudio\C#\Assignment\Assignment_5\obj\Debug\Assignment
 H:\dhdms\Git\C_Lang\Visualstudio\C#\Assignment\Assignment_5\obj\Debug\Assignment_5.csproj.CoreCompileInputs.cache
 H:\dhdms\Git\C_Lang\Visualstudio\C#\Assignment\Assignment_5\obj\Debug\Assignment_5.exe
 H:\dhdms\Git\C_Lang\Visualstudio\C#\Assignment\Assignment_5\obj\Debug\Assignment_5.pdb
+E:\dhdms\Git\Visualstudio\C#\Assignment\Assignment_5\bin\Debug\Assignment_5.exe.config
+E:\dhdms\Git\Visualstudio\C#\Assignment\Assignment_5\bin\Debug\Assignment_5.exe
+E:\dhdms\Git\Visualstudio\C#\Assignment\Assignment_5\bin\Debug\Assignment_5.pdb
+E:\dhdms\Git\Visualstudio\C#\Assignment\Assignment_5\obj\Debug\Assignment_5.csprojResolveAssemblyReference.cache
+E:\dhdms\Git\Visualstudio\C#\Assignment\Assignment_5\obj\Debug\Assignment_5.csproj.CoreCompileInputs.cache
+E:\dhdms\Git\Visualstudio\C#\Assignment\Assignment_5\obj\Debug\Assignment_5.exe
+E:\dhdms\Git\Visualstudio\C#\Assignment\Assignment_5\obj\Debug\Assignment_5.pdb
