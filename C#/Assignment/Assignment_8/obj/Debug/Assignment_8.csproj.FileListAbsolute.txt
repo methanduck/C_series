@@ -1,0 +1,7 @@
+H:\dhdms\Git\C_Lang\Visualstudio\C#\Assignment\Assignment_8\bin\Debug\Assignment_8.exe.config
+H:\dhdms\Git\C_Lang\Visualstudio\C#\Assignment\Assignment_8\bin\Debug\Assignment_8.exe
+H:\dhdms\Git\C_Lang\Visualstudio\C#\Assignment\Assignment_8\bin\Debug\Assignment_8.pdb
+H:\dhdms\Git\C_Lang\Visualstudio\C#\Assignment\Assignment_8\obj\Debug\Assignment_8.csprojAssemblyReference.cache
+H:\dhdms\Git\C_Lang\Visualstudio\C#\Assignment\Assignment_8\obj\Debug\Assignment_8.csproj.CoreCompileInputs.cache
+H:\dhdms\Git\C_Lang\Visualstudio\C#\Assignment\Assignment_8\obj\Debug\Assignment_8.exe
+H:\dhdms\Git\C_Lang\Visualstudio\C#\Assignment\Assignment_8\obj\Debug\Assignment_8.pdb
