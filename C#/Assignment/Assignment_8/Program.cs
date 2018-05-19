@@ -9,10 +9,9 @@ namespace Assignment_8
 {
     class Program
     {
-        class Mylist : IEnumerable, IEnumerator
+        class Mylist 
         {
             private int[] array;
-            int position = -1;
 
             public Mylist()
             {
@@ -36,10 +35,6 @@ namespace Assignment_8
                 }
             }
 
-            public object Current
-            {
-                get { return array[position]; }
-            }
             public IEnumerator GetEnumerator()
             {
                foreach(int i in array)
@@ -48,35 +43,19 @@ namespace Assignment_8
                 }
             }
 
-            public bool MoveNext()
-            {
-               if(position == array.Length -1)
-                {
-                    Reset();
-                    return false;
-                }
-                position++;
-                return (position < array.Length);
-            }
-
-            public void Reset()
-            {
-                position = -1;
-            }
         }
         static void Main(string[] args)
         {
             Mylist list = new Mylist();
+            IEnumerator iterator = list.GetEnumerator();
             for (int i = 0; i < 5; i++)
             {
                 list[i] = i;
             }
-
-            foreach(int i in list)
+            while (iterator.MoveNext())
             {
-                Console.WriteLine(i);
+                Console.WriteLine(iterator.Current);
             }
-            Console.WriteLine();
         }
     }
 }
