@@ -1,0 +1,11 @@
+/Users/koe/Desktop/Git/Visualstudio/C#/Assignment/Assignment_11-2/bin/Debug/netcoreapp2.0/Assignment_11-2.deps.json
+/Users/koe/Desktop/Git/Visualstudio/C#/Assignment/Assignment_11-2/bin/Debug/netcoreapp2.0/Assignment_11-2.runtimeconfig.json
+/Users/koe/Desktop/Git/Visualstudio/C#/Assignment/Assignment_11-2/bin/Debug/netcoreapp2.0/Assignment_11-2.runtimeconfig.dev.json
+/Users/koe/Desktop/Git/Visualstudio/C#/Assignment/Assignment_11-2/bin/Debug/netcoreapp2.0/Assignment_11-2.dll
+/Users/koe/Desktop/Git/Visualstudio/C#/Assignment/Assignment_11-2/bin/Debug/netcoreapp2.0/Assignment_11-2.pdb
+/Users/koe/Desktop/Git/Visualstudio/C#/Assignment/Assignment_11-2/obj/Debug/netcoreapp2.0/Assignment_11-2.csprojResolveAssemblyReference.cache
+/Users/koe/Desktop/Git/Visualstudio/C#/Assignment/Assignment_11-2/obj/Debug/netcoreapp2.0/Assignment_11-2.csproj.CoreCompileInputs.cache
+/Users/koe/Desktop/Git/Visualstudio/C#/Assignment/Assignment_11-2/obj/Debug/netcoreapp2.0/Assignment_11-2.AssemblyInfoInputs.cache
+/Users/koe/Desktop/Git/Visualstudio/C#/Assignment/Assignment_11-2/obj/Debug/netcoreapp2.0/Assignment_11-2.AssemblyInfo.cs
+/Users/koe/Desktop/Git/Visualstudio/C#/Assignment/Assignment_11-2/obj/Debug/netcoreapp2.0/Assignment_11-2.dll
+/Users/koe/Desktop/Git/Visualstudio/C#/Assignment/Assignment_11-2/obj/Debug/netcoreapp2.0/Assignment_11-2.pdb

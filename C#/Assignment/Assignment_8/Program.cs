@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Assignment_8
 {
-    class Program
+    class Program 
     {
-        class Mylist 
+        class Mylist : IEnumerable
         {
             private int[] array;
 

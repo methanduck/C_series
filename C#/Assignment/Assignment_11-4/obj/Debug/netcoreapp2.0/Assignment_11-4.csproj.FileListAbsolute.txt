@@ -1,0 +1,10 @@
+/Users/koe/Desktop/Git/Visualstudio/C#/Assignment/Assignment_11-4/bin/Debug/netcoreapp2.0/Assignment_11-4.deps.json
+/Users/koe/Desktop/Git/Visualstudio/C#/Assignment/Assignment_11-4/bin/Debug/netcoreapp2.0/Assignment_11-4.runtimeconfig.json
+/Users/koe/Desktop/Git/Visualstudio/C#/Assignment/Assignment_11-4/bin/Debug/netcoreapp2.0/Assignment_11-4.runtimeconfig.dev.json
+/Users/koe/Desktop/Git/Visualstudio/C#/Assignment/Assignment_11-4/bin/Debug/netcoreapp2.0/Assignment_11-4.dll
+/Users/koe/Desktop/Git/Visualstudio/C#/Assignment/Assignment_11-4/bin/Debug/netcoreapp2.0/Assignment_11-4.pdb
+/Users/koe/Desktop/Git/Visualstudio/C#/Assignment/Assignment_11-4/obj/Debug/netcoreapp2.0/Assignment_11-4.csproj.CoreCompileInputs.cache
+/Users/koe/Desktop/Git/Visualstudio/C#/Assignment/Assignment_11-4/obj/Debug/netcoreapp2.0/Assignment_11-4.AssemblyInfoInputs.cache
+/Users/koe/Desktop/Git/Visualstudio/C#/Assignment/Assignment_11-4/obj/Debug/netcoreapp2.0/Assignment_11-4.AssemblyInfo.cs
+/Users/koe/Desktop/Git/Visualstudio/C#/Assignment/Assignment_11-4/obj/Debug/netcoreapp2.0/Assignment_11-4.dll
+/Users/koe/Desktop/Git/Visualstudio/C#/Assignment/Assignment_11-4/obj/Debug/netcoreapp2.0/Assignment_11-4.pdb

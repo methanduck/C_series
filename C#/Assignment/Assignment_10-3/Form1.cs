@@ -12,7 +12,7 @@ namespace Assignment_10_3
 {
     public partial class Form1 : Form
     {
-        delegate void MyDelegate();
+        //delegate void MyDelegate();
         public Form1()
         {
             InitializeComponent();
@@ -24,10 +24,7 @@ namespace Assignment_10_3
         }
         public class EventFormTest
         {
-            static void Main()
-            {
-                Application.Run(new Form1());
-            }
+  
         }
     }
 }
